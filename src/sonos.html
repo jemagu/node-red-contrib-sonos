@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('jmx',{
+    RED.nodes.registerType('sonos',{
         category: 'sonos',
         color: '#a6bbcf',
         defaults: {
@@ -15,12 +15,12 @@
         outputs:0,
         icon: "bridge.png",
         label: function() {
-            return this.name||"jmx";
+            return this.name||"sonos";
         }
     });
 </script>
 
-<script type="text/x-red" data-template-name="jmx">
+<script type="text/x-red" data-template-name="sonos">
     <div class="form-row">
         <label for="node-input-server"><i class="icon-tag"></i> Server</label>
         <input type="text" id="node-input-server" placeholder="Server">
@@ -43,6 +43,6 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="jmx">
+<script type="text/x-red" data-help-name="sonos">
     <p>A simple node that converts the message payloads into all lower-case characters</p>
 </script>

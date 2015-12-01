@@ -14,5 +14,5 @@ module.exports = function(RED) {
             this.send(msg);
         });
     }
-    RED.nodes.registerType("jmx",SonosNode);
+    RED.nodes.registerType("sonos",SonosNode);
 }
