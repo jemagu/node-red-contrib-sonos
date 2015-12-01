@@ -1,0 +1,5 @@
+sonos/
+node_modules/
+.vscode/
+
+jsconfig.json
