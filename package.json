@@ -13,7 +13,7 @@
   ],
   "node-red": {
     "nodes": {
-      "jmx": "sonos/sonos.js"
+      "sonos": "sonos/sonos.js"
     }
   },
   "devDependencies": {
