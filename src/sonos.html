@@ -5,11 +5,9 @@
         defaults: {
             server: {value:""},
             port: {value:""},
+            url: {value:""},
+            volume: {value:"", validate:RED.validators.regex(/^[1-9][0-9]?$|^100$/)},
             name: {value:""}
-        },
-        credentials: {
-            username: {type:"text"},
-            password: {type:"password"}
         },
         inputs:1,
         outputs:0,
@@ -30,16 +28,16 @@
         <input type="text" id="node-input-port" placeholder="Port">
     </div>
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-url"><i class="fa fa-file-audio-o"></i> URL</label>
+        <input type="text" id="node-input-url" placeholder="URL">
     </div>
-     <div class="form-row">
-        <label for="node-input-username"><i class="icon-tag"></i> Username</label>
-        <input type="text" id="node-input-username">
+        <div class="form-row">
+        <label for="node-input-volume"><i class="fa fa-volume-up"></i> Volume</label>
+        <input type="text" id="node-input-volume" placeholder="Volume">
     </div>
     <div class="form-row">
-        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
-        <input type="password" id="node-input-password">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>
 
