@@ -6,9 +6,10 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         this.sonos_ip = config.server;
         this.url_to_play = config.url;
+        this.volume = config.volume;
         this.on('input', msg => {
             const sonos_device = new sonos.Sonos(this.sonos_ip);
-            sonos_device.setVolume(this.url_to_play, (err, playing) => {
+            sonos_device.setVolume(this.volume, (err, data) => {
                 if (err) {
                     this.error(err,msg);
                 }
@@ -18,7 +19,6 @@ module.exports = function(RED) {
                     this.error(err,msg);
                 }
             });
-            //this.send(msg);
         });
     }
     RED.nodes.registerType("sonos",SonosNode);
